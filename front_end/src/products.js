@@ -1,7 +1,7 @@
 const products = [
   {
     "_id": "1",
-    "name": "Vaccutainers",
+    "name": "EDTA Vaccutainers",
     "image": "/images/vaccutainers.jpg",
     "description": "High-quality vaccutainers for precise blood sample collection and storage.",
     "brand": "LabTech",
@@ -43,7 +43,7 @@ const products = [
     "name": "Glucose Reagent",
     "image": "/images/glucreagent.jpg",
     "description": "A wide range of high-quality reagents for various laboratory experiments and analyses.",
-    "brand": "BioChem",
+    "brand": "Randox",
     "category": "Laboratory Supplies",
     "supplier": "HealthSupplies Limited",
     "price": 10000,
@@ -69,7 +69,7 @@ const products = [
     "name": "PCR Kit",
     "image": "/images/pcr-kit.jpg",
     "description": "PCR kits for molecular biology research and DNA amplification.",
-    "brand": "MolGen",
+    "brand": "TetraCore",
     "category": "Laboratory Supplies",
     "supplier": "HealthSupplies Limited",
     "price": 25000,
