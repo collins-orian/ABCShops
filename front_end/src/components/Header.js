@@ -22,7 +22,9 @@ function Header() {
 			>
 				<Container>
 					<LinkContainer to="/">
-						<Navbar.Brand>LabEquip</Navbar.Brand>
+						<Navbar.Brand>
+							<strong>LabEquip</strong>
+						</Navbar.Brand>
 					</LinkContainer>
 
 					<Navbar.Toggle aria-controls="navbarScroll" />
@@ -34,12 +36,13 @@ function Header() {
 						>
 							<LinkContainer to="/cart">
 								<Nav.Link>
-									<i className="fa-solid fa-cart-shopping"></i> Cart
+									<strong><i className="fa-solid fa-cart-shopping"></i> Cart</strong>
+									
 								</Nav.Link>
 							</LinkContainer>
 							<LinkContainer to="/login">
 								<Nav.Link>
-									<i className="fa-solid fa-user"></i> Login
+									<strong><i className="fa-solid fa-user"></i> Login</strong>
 								</Nav.Link>
 							</LinkContainer>
 

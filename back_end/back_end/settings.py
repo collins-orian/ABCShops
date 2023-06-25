@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
 
+    # Lets django know about the base application
     'base.apps.BaseConfig',
 ]
 
@@ -125,13 +126,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# this enables us to see the /images path in the url when the user uploaded file is clicked
 MEDIA_URL = '/images/'
 
 
+# this lets django know where to place user uploaded files
 STATICFILES_DIR = [
     BASE_DIR / 'static'
 ]
 
+# this lets django know about the static file
 MEDIA_ROOT = 'static/images'
 
 

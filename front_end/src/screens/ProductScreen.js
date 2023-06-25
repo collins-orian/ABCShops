@@ -33,7 +33,7 @@ function ProductScreen() {
 				<Col md={3}>
 					<ListGroup variant="flush">
 						<ListGroup.Item>
-							<h2>{product.name}</h2>
+							<h3>{product.name}</h3>
 						</ListGroup.Item>
 
 						<ListGroup.Item>
@@ -44,11 +44,16 @@ function ProductScreen() {
 							/>
 						</ListGroup.Item>
 						<ListGroup.Item>
-							<strong>Price: ₦{product.price}</strong>
-						</ListGroup.Item>
-						<ListGroup.Item>
 							<strong>Description: </strong>
 							<br /> {product.description}
+						</ListGroup.Item>
+						<ListGroup.Item>
+							<strong>Brand: </strong>
+							<br /> {product.brand}
+						</ListGroup.Item>
+						<ListGroup.Item>
+							<strong>Supplier: </strong>
+							<br /> {product.supplier}
 						</ListGroup.Item>
 					</ListGroup>
 				</Col>

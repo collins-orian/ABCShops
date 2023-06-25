@@ -17,7 +17,7 @@ products = [
         "name": "Microscope",
         "image": "/images/microscope.jpg",
         "description": "Advanced microscopes for detailed analysis and research purposes.",
-        "brand": "KERN",
+        "brand": "KERN Optics",
         "category": "Laboratory Equipment",
         "supplier": "LabVine Limited",
         "price": 150000,
