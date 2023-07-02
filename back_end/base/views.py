@@ -31,11 +31,12 @@ def getRoutes(request):
 def getProducts(request):
 
     # query Products model and get all data from it
-    product = Product.objects.all()
-    # serializer, takes in the query varuable and converts it to json format.
-    # the many parameter is set to true if multiple products are serialized.
-    # it is set to false when the data is just one
-    serializer = ProductSerializer(product, many=True)
+    products = Product.objects.all()
+    """serializer, takes in the query varuable and converts 
+    it to json format.the many parameter is set to true if 
+    multiple products are serialized.it is set to false when 
+    the data is just one"""
+    serializer = ProductSerializer(products, many=True)
 
     # returns response from serialised data from database
     return Response(serializer.data)
