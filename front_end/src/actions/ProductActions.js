@@ -42,22 +42,18 @@ export const listProducts = () => async (dispatch) => {
 	}
 };
 
-
 /**
  * this listProductDetails function actions that reducers act on
  * to enable state to be passed to a desired component.
  */
 export const listProductDetails = (id) => async (dispatch) => {
 	try {
-
 		dispatch({ type: PRODUCT_DETAILS_REQUEST });
 
 		const { data } = await axios.get(`/api/products/${id}`);
 
 		dispatch({ type: PRODUCT_DETAILS_SUCCESS, payload: data });
 	} catch (error) {
-	
-
 		dispatch({
 			type: PRODUCT_DETAILS_FAIL,
 			payload:

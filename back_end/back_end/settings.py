@@ -127,7 +127,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# this enables us to see the /images path in the url when the user uploaded file is clicked
+# this enables us to see the /images path in the url 
+# when the user uploaded file is clicked
 MEDIA_URL = '/images/'
 
 
@@ -136,10 +137,11 @@ STATICFILES_DIR = [
     BASE_DIR / 'static'
 ]
 
-# this lets django know about the static file
+# this lets django know where to find user uploaded files
+# in this case, the images folder
 MEDIA_ROOT = 'static/images'
 
-
+# allows cross origin resource sharing
 CORS_ALLOW_ALL_ORIGINS = True
 
 # Default primary key field type

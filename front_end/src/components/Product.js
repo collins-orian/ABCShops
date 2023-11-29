@@ -13,7 +13,9 @@ function Product({ product }) {
 			<Card.Body>
 				<Link to={`/product/${product._id}`}>
 					<Card.Title as="div">
-						<strong>{product.name}</strong>
+						<h4>
+							<strong>{product.name}</strong>
+						</h4>
 					</Card.Title>
 				</Link>
 
@@ -31,9 +33,8 @@ function Product({ product }) {
 						/>
 					</div>
 				</Card.Text>
-				
-					<Card.Text as="h3">₦{product.price}</Card.Text>
-			
+
+				<Card.Text as="h3">₦{product.price}</Card.Text>
 			</Card.Body>
 		</Card>
 	);

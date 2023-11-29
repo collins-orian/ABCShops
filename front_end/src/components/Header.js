@@ -20,7 +20,7 @@ function Header() {
 				fixed="top"
 				collapseOnSelect
 			>
-				<Container>
+				<Container fluid>
 					<LinkContainer to="/">
 						<Navbar.Brand>
 							<strong>LabEquip</strong>
@@ -66,6 +66,7 @@ function Header() {
 							/>
 							<Button variant="btn btn-success">Search</Button>
 						</Form>
+						
 					</Navbar.Collapse>
 				</Container>
 			</Navbar>

@@ -12,6 +12,7 @@ function HomeScreen() {
 	const productList = useSelector((state) => state.productList);
 	const { error, loading, products } = productList;
 
+	// fires off action when the useState changes or a component mounts
 	useEffect(() => {
 		// fires off action listProducts
 		dispatch(listProducts());
@@ -23,7 +24,7 @@ function HomeScreen() {
 			{loading ? (
 				<Loader />
 			) : error ? (
-				<Message variant='danger'>{error}</Message>
+				<Message variant="danger">{error}</Message>
 			) : (
 				<Row>
 					{products.map((product) => (

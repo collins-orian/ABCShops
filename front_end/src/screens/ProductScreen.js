@@ -33,6 +33,7 @@ function ProductScreen({ history }) {
 
 	return (
 		<div>
+			{/* This link takes you back to the home page */}
 			<Link to="/" className="btn btn-light my-3">
 				Back
 			</Link>
@@ -49,7 +50,7 @@ function ProductScreen({ history }) {
 					<Col md={3}>
 						<ListGroup variant="flush">
 							<ListGroup.Item>
-								<h3>{product.name}</h3>
+								<h2>{product.name}</h2>
 							</ListGroup.Item>
 
 							<ListGroup.Item>
