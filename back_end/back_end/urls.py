@@ -23,7 +23,10 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     # this line includes the path to the routes in the base/url.py file
-    path('api/', include('base.urls')),
+    # path('api/', include('base.urls')),
+    path('api/products/', include('base.urls.product_urls')),
+    path('api/users/', include('base.urls.user_urls')),
+    path('api/orders/', include('base.urls.order_urls')),
 ]
 
 # allows django to know where to look for the media url, starting from the media root directory

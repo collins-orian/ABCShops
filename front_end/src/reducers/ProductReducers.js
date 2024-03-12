@@ -1,3 +1,21 @@
+/**
+ * @fileOverview ProductReducers.js - This file contains the reducers for the product
+ * actions. It contains the productListReducer and the productDetailsReducer functions
+ * that are dispatched to the store and the state is passed to the desired component.
+ *
+ * productListReducer - this function actions that reducers act on to enable state to be
+ * passed to a desired component. It handles the different cases that may occur when
+ * the product list is requested from the API.
+ *
+ * productDetailsReducer - this function actions that reducers act on to enable state to be
+ * passed to a desired component. It handles the different cases that may occur when the
+ * product details are requested from the API.
+ *
+ * @requires ProductConstants
+ * @exports productListReducer
+ * @exports productDetailsReducer
+ */
+
 import {
 	PRODUCT_LIST_REQUEST,
 	PRODUCT_LIST_SUCCESS,
@@ -8,56 +26,54 @@ import {
 } from "../constants/ProductConstants";
 
 /**
- * This product list reducer handles state management for listing
- * products. based on an action that is carried out, passed to this
- * reducer and is being passed on the desired component.
+ * this productListReducer function actions that reducers act on
+ * to enable state to be passed to a desired component.
+ * @param {object} state - the state of the product
+ * @param {object} action - the action to be carried out
+ * @returns {object} - the data gotten from the api
  */
 
 export const productListReducer = (state = { products: [] }, action) => {
 	switch (action.type) {
-		/**
-		 * this case occurs at the initial request from the API. Initially,
-		 * the products array is empty but gets updated when an action has
-		 * taken place. Loading is set to true as data has not yet been
-		 * retrieved from the API
-		 */
+		// this case occurs at the initial request from the API.
 		case PRODUCT_LIST_REQUEST:
 			return { loading: true, products: [] };
 
-		/**
-		 * this case comes up when the request is successful and the data gotten
-		 * from the api request comes back. the products array gets updated and
-		 * the data is stored in it. Loading is set to false as data has been
-		 * retrieved from the API
-		 */
+		// this case comes up when the request is successful and the data gotten
 		case PRODUCT_LIST_SUCCESS:
 			return { loading: false, products: action.payload };
 
-		/**
-		 * this case comes up when the request failed and the data gotten
-		 * from the api request is not gotten. The products array does not
-		 * get updated. Loading is set to false as data has been
-		 * retrieved from the API
-		 */
-
+		// this case comes up when the request failed and the data gotten
 		case PRODUCT_LIST_FAIL:
 			return { loading: false, error: action.payload };
 
-		/**
-		 * this default comes up when the request is empty and no data is retrieved.
-		 * the state is returned with an empty products array
-		 */
-
+		// this default comes up when the request is empty and no data is retrieved.
 		default:
 			return state;
 	}
 };
 
+/**
+ * this productDetailsReducer function actions that reducers act on
+ * to enable state to be passed to a desired component.
+ * @param {object} state - the state of the product
+ * @param {object} action - the action to be carried out
+ * @returns {object} - the data gotten from the api
+ */
+
 export const productDetailsReducer = (
+	// the state is set to an empty object with an empty array of reviews
 	state = { product: { reviews: [] } },
 	action
 ) => {
+	// this switch statement handles the different cases that may occur
 	switch (action.type) {
+		/* this case 
+		occurs at the initial request from the API. 
+		the loading is set to true and the state is
+		returned using the spread operator to get the 
+		previously set state. 
+		*/
 		case PRODUCT_DETAILS_REQUEST:
 			return { loading: true, ...state };
 
